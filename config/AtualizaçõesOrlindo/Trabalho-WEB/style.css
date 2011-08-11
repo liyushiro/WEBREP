@@ -1,0 +1,165 @@
+/*
+ _________                __               __   __               ____      ____  ________  ______    
+|  _   _  |              [  |             [  | [  |             |_  _|    |_  _||_   __  ||_   _ \   
+|_/ | | \_|_ .--.  ,--.   | |.--.   ,--.   | |  | |--.   .--.     \ \  /\  / /    | |_ \_|  | |_) |  
+    | |   [ `/'`\]`'_\ :  | '/'`\ \`'_\ :  | |  | .-. |/ .'`\ \    \ \/  \/ /     |  _| _   |  __'.  
+   _| |_   | |    // | |, |  \__/ |// | |, | |  | | | || \__. |     \  /\  /     _| |__/ | _| |__) | 
+  |_____| [___]   \'-;__/[__;.__.' \'-;__/[___][___]|__]'.__.'       \/  \/     |________||_______/  
+
+-----------------------------------------------------------------------------------------------------
+Prof. Raphael Garcia
+-----------------------------------------------------------------------------------------------------
+Descrição:
+          css 
+-----------------------------------------------------------------------------------------------------
+Integrantes:
+Alisson do Carmo 
+Ayrton Saito
+Arthur Zanatta
+Ricardo Chikasawa 
+Orlindo Junior 
+-----------------------------------------------------------------------------------------------------
+ */
+body {margin:0px; padding:0px;font-family: 'MuseoSlab500', Arial, Helvetica, sans-serif; background:#E0F3B0; color:#6B7755;}
+
+a{font-family: 'MuseoSlab500'; font-size:14px; color:#6B7755;}
+h1{font-family: 'MuseoSlab500'; font-size:30px; padding:0px; margin-top:0px; color:#84A532;}
+h2{font-family: 'MuseoSlab500'; font-size:24px; padding:0px; margin-top:0px; color:#84A532;}
+h3{font-family: 'MuseoSlab500'; font-size:18px; padding:0px; margin-top:0px; color:#84A532;}
+h4{font-family: 'MuseoSlab500'; font-size:30px; padding:0px; margin: 0px 0px 0px 10px; color:#2E4014;}
+h5{font-family: 'MuseoSlab500'; font-size:24px; padding:0px; margin:0px; color:#84A532;}
+h6{font-family: 'MuseoSlab500'; font-size:16px; padding:0px; margin:0px; color:#648318;}
+
+#header{background:#2E4014; height:100px; border-bottom: solid 1px #47621f;}
+#middlerow{background:#ABD14D; height:auto;padding:20px 0px; border-top: solid 1px #2E4014;}
+#middlerowsub{ height:auto;padding:20px 0px; border-top: solid 1px #2E4014; background:url(images/midbg.gif) repeat-x;}
+#bottomrow{width:960px; margin:0 auto;}
+.leftcol{width:650px; float:left; padding:10px;}
+
+
+.head{width:960px; margin:0 auto; position:relative; z-index: 3000;}
+.center{width:960px; margin:0 auto; position:relative;}
+#logo{padding-top:25px;width:167px;}
+#logo a{ background:url(images/logo.gif) no-repeat; text-indent:-10000px; display:block; height:44px; width:167px;}
+
+/*Menu Begin*/
+#menu{float:right;}
+#menu ul{ margin:0;}
+#menu ul li{ list-style-type:none; float:left;}
+#menu ul li a{ font-size:18px; color:#84a532; padding:10px 25px; text-decoration:none;}
+#menu ul li ul { margin-top:10px;}
+#menu ul li ul li a{ padding:0px 0px;}
+li.submenu ul{float:left; position:absolute; margin-top:20px; padding:0px; width:120px;opacity:0.7; overflow:hidden; display:none;}
+li.submenu ul li{padding:4px 0px; background:#2E4014; border-bottom:solid 1px #5c7904; width:120px; text-align:center;}
+li.submenu ul li a{ margin:0px; padding:0px;}
+#menu ul li a.active{color:#E0F3B0;}
+/*Menu END*/
+
+
+
+.textbox{width:auto;float:left; padding-bottom:20px;}
+
+
+/*Testimonial Begin*/
+#testimonial{width:260px; float:left; padding:10px; background:url(images/border.gif) no-repeat bottom left; background-position: 0px 75px;}
+#testimonial p{padding: 5px 5px;background:#a5b87d; margin-bottom:0px; float:left;}
+#testimonial span{display:block;background: url(images/arrow.gif) no-repeat top right; width:100%; height:13px; float:right;}
+#testimonial a{font-family: 'MuseoSlab500Italic'; color:#E0F3B0;}
+.commenter{display:block; float:right; padding:5px 0px; color:#475133;font-family: 'MuseoSlab500l'; width:260px; text-align:right;}
+/*Testimonial END*/
+
+
+#boxholder{ float:left; margin-top:30px; padding-bottom:30px;}
+.box{width:470px; float:left;}
+.box img{float:left;}
+.box p{ float:left; margin:0; width:340px;padding-left:10px;}
+.box h3{float:left; margin:0; padding-left:10px;}
+
+#staff{}
+.staffbox{width:auto; float:left; margin-bottom:12px; background:#abd14d; border:solid 1px #a1c83f; padding:5px;}
+.staffbox:hover{background:#95b93d;}
+.staffbox p{margin:0px; padding:5px;}
+.staffbox a{font-size:13px; color:#E0F3B0;}
+.staffbox img{border: solid 4px #fff; float:left; margin-right:5px;}
+.staffbox h6{padding-top:5px;}
+
+/*Footer Begin*/
+#footer {width:100%; height:60px; background:url(images/footer.gif) repeat-x; float:left;}
+#foot{width:960px; margin:0 auto; margin-top:20px;}
+#copyright{float:left;font-size:12px; margin-top:10px;}
+#copyright a{font-size:12px; text-decoration:none; color:#E0F3B0;}
+#feed{float:right;}
+#feed img{ border:solid 0px;}
+.twitter{ position:relative; display:block; width:36px; height:30px; float:left; padding:0px 5px;}
+.t1{ position:absolute; z-index:12; left:0; top:0;}
+.t2{ position:absolute; left:0; top:0;}
+
+.facebook{position:relative; display:block; width:36px; height:30px; float:left; padding:0px 5px;}
+.fb1{ position:absolute; z-index:14; left:0; top:0;}
+.fb2{ position:absolute; left:0; top:0; }
+
+.rss{position:relative; display:block; width:36px; height:30px; float:left; padding:0px 5px;}
+.rss1{ position:absolute; z-index:15; left:0; top:0;}
+.rss2{ position:absolute; left:0; top:0; }
+/*Footer END*/
+
+
+
+
+
+/*Font-face Begin*/
+/*MuseoSlab 500. A font by Jos Buivenga (exljbris) -> http://www.exljbris.nl */ 
+@font-face {
+	font-family: 'MuseoSlab500Italic';
+	src: url('fonts/museo_slab_500italic-webfont.eot');
+	src: local('?'), url('fonts/museo_slab_500italic-webfont.woff') format('woff'), url('fonts/museo_slab_500italic-webfont.ttf') format('truetype'), url('fonts/museo_slab_500italic-webfont.svg#webfonti368Mawh') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'MuseoSlab500';
+	src: url('fonts/museo_slab_500-webfont.eot');
+	src: local('?'), url('fonts/museo_slab_500-webfont.woff') format('woff'), url('fonts/museo_slab_500-webfont.ttf') format('truetype'), url('fonts/museo_slab_500-webfont.svg#webfonti368Mawh') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*Font-face END*/
+
+/* Easy Slider */
+#sliderbg{ width:960px; height:300px; background:url(images/sliderbg.jpg) no-repeat;}
+#slider p{width:400px;float:right; padding-top:50px;}
+#slider span{width:410px; margin-left:50px; float:left;}
+.slideh1{ font-size:24px; color:#2E4014;}
+.graphic, #prevBtn, #nextBtn, #slider1prev, #slider1next{margin:0;padding:0;display:block;overflow:hidden;text-indent:-8000px;}
+#slider ul, #slider li,#slider2 ul, #slider2 li{margin:0;padding:0;list-style:none;}
+#slider2{margin-top:1em;}
+#slider li, #slider2 li{ width:880px;height:300px;overflow:hidden; }	
+#prevBtn, #nextBtn,#slider1next, #slider1prev{ display:block;width:37px;height:37px;position:absolute;left:10px;top:150px;z-index:1000;}	
+#nextBtn, #slider1next{ left:910px;}														
+#prevBtn a, #nextBtn a,#slider1next a, #slider1prev a{  display:block;position:relative;width:37px;height:37px;background:url(images/btn_prev.png) no-repeat 0;}	
+#nextBtn a, #slider1next a{ background:url(images/btn_next.png) no-repeat 0 0;	}	
+		
+	/* numeric controls */	
+ol#controls{margin:1em 0;padding:0;height:28px;}
+ol#controls li{margin:0 10px 0 0; padding:0;float:left;list-style:none;height:28px;line-height:28px;}
+ol#controls li a{float:left;height:28px;line-height:28px;border:1px solid #ccc;background:#DAF3F8;color:#555;padding:0 10px;text-decoration:none;}
+ol#controls li.current a{background:#5DC9E1;color:#fff;}
+ol#controls li a:focus, #prevBtn a:focus, #nextBtn a:focus{outline:none;}
+	
+/* // Easy Slider END */
+
+
+/*Twitter Begin*/
+#twitter{height:75px; padding:5px; background:url(images/twitter.gif) no-repeat left; }
+.tweet, .query {font-family: 'MuseoSlab500', Georgia, serif;font-size: 22px;color: #6B7755; padding-left:90px;}
+.tweet .tweet_list, .query .tweet_list {list-style-type: none;margin: 0;padding: 0;}
+.tweet .tweet_list .awesome, .tweet .tweet_list .epic, .query .tweet_list .awesome, .query .tweet_list .epic {text-transform: uppercase; }
+.tweet .tweet_list li, .query .tweet_list li {overflow-y: auto;overflow-x: hidden;padding: .5em; }
+.tweet .tweet_list li a, .query .tweet_list li a {font-size: 22px;color:#2E4014; }
+.tweet .tweet_list .tweet_even, .query .tweet_list .tweet_even {background-color: #91E5E7; }
+.tweet .tweet_list .tweet_avatar, .query .tweet_list .tweet_avatar {padding-right: .5em;float: left; }
+.tweet .tweet_list .tweet_avatar img, .query .tweet_list .tweet_avatar img {vertical-align: middle; }
+
+/*Twitter END*/

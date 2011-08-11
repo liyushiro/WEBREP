@@ -1,0 +1,123 @@
+<html>
+<head>
+<title>Republicas - Cadastro de localidade</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript">
+  var geocoder;
+  var map;
+  function inicializaMapa() { // inicializa google map
+    geocoder = new google.maps.Geocoder();	
+    var latlng = new google.maps.LatLng("-34.397" , "150.644"); // inicializa coordenadas 
+    var myOptions = { // opões de vizualização
+      zoom: 8,
+      center: latlng, // seta centro da imagem do mapa
+      mapTypeId: google.maps.MapTypeId.ROADMAP // seleciona tipo de mapa
+    }
+	alert("Criou");
+    map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+  }
+
+  function codificarEndereco() { // codifica endereço em coordenadas
+    var address = document.getElementById("endereco").value;
+	var localizacoes;
+    geocoder.geocode( { 'address': address}, function(results, status) { // codifica endereço e retorna array de resultados de coordenadas
+      if (status == google.maps.GeocoderStatus.OK) { // verifica se conseguiu codificar
+        map.setCenter(results[0].geometry.location);
+        var marker = new google.maps.Marker({
+            map: map, 
+            position: results[0].geometry.location
+	    
+        });
+	localizacoes = results[0].geometry.location.toString().split(",");
+	alert((localizacoes[0].slice(1, localizacoes[0].length)));
+	alert((localizacoes[1].slice(0, localizacoes[1].length-1)));
+      } else {
+        alert("Não foi possivel encontrar as coordenadas do endereço fornecido" + status);
+      }
+    });
+  }
+</script>
+</head>
+<body onload="inicializaMapa()">
+  <div id="header">
+	<div class="head">
+		<!--LOGO Begin-->
+		<div id="logo"><a href="index.html">REP WEB</a></div>
+		<!--LOGO END-->
+		<!--Menu Begin-->
+		<div id="menu">
+		<ul>
+		<li><a class="active" href="index.html">Home</a></li>
+		<li class="submenu"><a href="about.html">Sobre</a><ul></ul></li>
+		<li class="submenu"><a href="#">Serviços</a><ul><li><a href="cadastroRepublica.html">Nova Republica</a></li><li><a href="novoUsuario.html">Novo Usuario</a></li><li><a href="#">Service3</a></li></ul></li>
+		<li><a href="#">Contato</a></li>
+		</ul>
+		</div>
+		
+		<!--Menu END-->
+	</div>
+</div>
+
+  <table width="80%" align="center" border="1" cellspacing="0" cellpadding="5">
+   <tr>
+     <td colspan="3"><b>Nome da republica</b></td>
+   </tr>
+   <tr>
+     <td colspan="3"><input type="text" name="txtNome" size="165" maxlength="70" onBlur="return trim(this.value, this);"></td>
+   </tr>
+   
+   <tr>
+     <td colspan="2"><b>Endere&ccedil;o</b></td>
+     <td><b>Complemento</b></td> 
+   </tr>
+   <tr>
+     
+     <td colspan="2"><input type="text" name="txtEndereco" size="90" maxlength="100"  onBlur="codificarEndereco(); "></td>
+     <td><input type="text" name="txtComplemento" size="30" maxlength="40"onBlur="return trim(this.value, this);"></td>
+   </tr>
+   
+   <tr>
+	 <td><b>Data de Fundação</b></td>
+     <td ><b>Quantidade de moradores</b></td>
+     <td><b>Telefone</b></td> 
+   </tr>
+   <tr>
+     <td><input type="text" name="txtDataFundacao" size="10" maxlength="10" onKeyPress = "return formataData(document.form1.txtDataFundacao, event);" onBlur="return VerificaData(this.value, this);" ></td>
+     <td><input type="text" name="txtQuantMoradores" size="10" maxlength="10" onBlur="return trim(this.value, this);"></td>
+     <td><input type="text" name="txtTelefone" size="60" maxlength="100"  onBlur="return trim(this.value, this);"></td>
+   
+   <tr>
+     <td colspan="2"><b>Nome do responsavel</b></td>
+     <td><b>Telefone para contato</b></td> 
+   </tr>
+   <tr>
+     <td colspan="2"><input type="text" name="txtNomeResponsavel" size="90" maxlength="100"  onBlur="return trim(this.value, this);"></td>
+     <td><input type="text" name="txtTelefoneContato" size="30" maxlength="40"onBlur="return trim(this.value, this);"></td>
+   </tr>
+   
+   <tr>
+	<td colspan="3"><b>Anexar Foto</b></td>
+   </tr>
+   <tr>
+	<td colspan="3"><input type="file" size="100" name="arqCurriculum"></td>
+   </tr>
+   
+   <tr></td>
+	</tr>
+   
+   <tr>
+        
+		<td colspan="3" align="center">	
+ 		<input type="reset" name="limpar" value="Limpar">
+ 		<input type="submit" name="cadastrar" value="Cadastrar Republica">
+        </td>
+	
+	</tr>
+
+	
+  </table>
+<div id="map_canvas" class="center" align="center" style="height:40%; width: 80%; top:10px">  
+ </div>
+</body>
+</html>
